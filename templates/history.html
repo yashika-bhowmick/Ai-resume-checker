@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Resume History</h2>
+
+{% if reports %}
+    {% for r in reports %}
+        <div class="card">
+            <h3>Resume Report</h3>
+            <p>{{ r.resume[:150] }}</p>
+
+            <h4>Skills</h4>
+            <ul>
+                {% for skill in r.result.get("skills", []) %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+
+            <h4>Missing Skills</h4>
+            <ul>
+                {% for skill in r.result.get("missing_skills", []) %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>You haven't analyzed any resumes yet.</p>
+{% endif %}
+
+{% endblock %}

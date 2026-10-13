@@ -1,0 +1,599 @@
+/* body{
+    margin:0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #f5f7fb;
+    color: #1a1a1a;
+}
+
+.auth-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.auth-card{
+    width: 400px;
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.auth-card h2{
+    margin-bottom: 5px;
+
+}
+
+.sub-text{
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.auth-card input{
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: 0.2s;
+
+}
+
+.auth-card input:focus{
+    border-color: #2563eb;
+    outline: none;
+}
+
+.auth-card button{
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    background: #111827;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.auth-card button:hover{
+    background: #2563eb;
+}
+
+
+.auth-links a{
+    font-size: 30px;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.switch-auth{
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.container{
+    width: 85%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+header{
+    color: white;
+    padding: 18px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1{
+    display: inline;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav{
+    float: right;
+}
+
+nav a{
+    color: #cdb5f5;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover{
+    color: white;
+}
+
+main{
+    margin-top: 40px;
+}
+
+.card{
+    background:  white;
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: 0.2s ease;
+}
+
+.card:hover{
+    transform: translateY(-2px);
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+h3{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+textarea{
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    font-size:14px;
+
+}
+
+input[type= 'file'],
+input[type='text']{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+input[name='role']{
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1 px solid #ddd;
+}
+
+button{
+    margin-top: 15px;
+    padding: 12px;
+    background: #111827;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+button:hover{
+    background: #2563eb;
+}
+
+ul{
+    padding-left: 18px;
+}
+
+li{
+    margin-bottom: 6px;
+}
+
+footer{
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
+    background: #e5e7eb;
+    font-size: 14px;
+} */
+
+
+
+/*  1. Global styles */
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --dark: #111827;
+    --text: #1f2937;
+    --muted: #667085;
+    --background: #f5f7fc;
+    --white: #ffffff;
+    --border: #e5e7eb;
+    --shadow: 0 8px 28px rgba(15, 23, 42, 0.07);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, "Segoe UI", system-ui, Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* 2. Header and navigation
+ */
+
+header {
+    background: var(--dark);
+    color: white;
+    padding: 17px 0;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.12);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+header h1 {
+    display: inline;
+    margin: 0;
+    color: white;
+    font-size: 22px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    float: none;
+}
+
+nav a {
+    color: #e5e7eb;
+    padding: 9px 12px;
+    margin: 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* 3. Page layout */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 38px auto 60px;
+}
+
+h1, h2, h3 {
+    line-height: 1.3;
+}
+
+main > h1 {
+    color: #101828;
+    font-size: clamp(25px, 3vw, 34px);
+    font-weight: 750;
+    letter-spacing: -0.7px;
+}
+
+h2 {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    color: #172554;
+    font-size: 21px;
+}
+
+h3 {
+    margin-bottom: 12px;
+    color: #26345a;
+    font-size: 17px;
+}
+
+/* 4. Cards */
+
+.card {
+    background: var(--white);
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    margin-bottom: 26px;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.10);
+}
+
+/* 
+   5. Form labels and inputs */
+
+label {
+    display: block;
+    margin: 17px 0 7px;
+    color: #344054;
+    font-size: 14px;
+    font-weight: 650;
+}
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[name="role"],
+select {
+    display: block;
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 14px;
+    margin-top: 9px;
+    border: 1px solid #d0d5dd;
+    border-radius: 9px;
+    background: #fff;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea {
+    min-height: 170px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+textarea::placeholder,
+input::placeholder {
+    color: #98a2b3;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+}
+
+input[type="file"] {
+    display: block;
+    width: 100%;
+    margin: 12px 0 20px;
+    padding: 13px;
+    border: 1px dashed #c7cce0;
+    border-radius: 10px;
+    background: #fafaff;
+    color: #475467;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+input[type="file"]::file-selector-button {
+    margin-right: 12px;
+    padding: 9px 12px;
+    border: none;
+    border-radius: 7px;
+    background: #eef2ff;
+    color: #3730a3;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+
+/* 6. Buttons */
+
+button,
+input[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 12px 22px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 9px;
+    background: var(--primary);
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background: var(--primary-hover);
+    box-shadow: 0 5px 14px rgba(79, 70, 229, 0.2);
+    transform: translateY(-1px);
+}
+
+/* ==========================
+   7. Login and signup pages
+========================== */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px);
+    margin: 30px 16px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 35px;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.auth-card h2 {
+    margin-bottom: 8px;
+    color: #101828;
+    font-size: 26px;
+    letter-spacing: -0.5px;
+}
+
+.sub-text {
+    margin-bottom: 22px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.auth-card input {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px;
+    margin-top: 12px;
+    border: 1px solid #d0d5dd;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.auth-card button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.auth-links {
+    margin-top: 22px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.auth-links a,
+.switch-auth {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ==========================
+   8. Analysis results
+========================== */
+.result-section {
+    padding: 25px 28px;
+    margin: 22px 0;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: white;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.045);
+}
+
+.result-section h2,
+.result-section h3 {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+ul, ol {
+    padding-left: 23px;
+}
+
+li {
+    margin-bottom: 7px;
+    color: #475467;
+}
+
+.error {
+    padding: 14px 16px;
+    border: 1px solid #fecdca;
+    border-radius: 9px;
+    background: #fef3f2;
+    color: #b42318;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================
+   9. Footer
+========================== */
+footer {
+    margin-top: 60px;
+    padding: 24px 16px;
+    border-top: 1px solid var(--border);
+    background: white;
+    color: var(--muted);
+    text-align: center;
+    font-size: 15px;
+}
+
+/* ==========================
+   10. Mobile layout
+========================== */
+@media (max-width: 680px) {
+    header .container {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    nav {
+        justify-content: flex-start;
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+    }
+
+    .container,
+    main {
+        width: 92%;
+    }
+
+    main {
+        margin-top: 26px;
+    }
+
+    .card {
+        padding: 20px;
+        border-radius: 13px;
+    }
+
+    .auth-card {
+        padding: 24px;
+    }
+
+    .result-section {
+        padding: 19px;
+    }
+}
+
+
+main.container > h2 {
+    margin-top: 25px;
+    margin-bottom: 18px;
+}
