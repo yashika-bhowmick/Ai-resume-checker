@@ -1,7 +1,11 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
+import os
+from dotenv import load_dotenv
 
-DATABASE_URL = "mysql+pymysql://NR33tiuABb2cnMd.root:OCAuMbNZOaTuT74o@gateway01.ap-northeast-1.prod.aws.tidbcloud.com:4000/test?ssl_ca=/etc/ssl/certs/ca-certificates.crt"
+load_dotenv()
+
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 engine = create_engine(
     DATABASE_URL,
