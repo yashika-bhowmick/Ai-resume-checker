@@ -22,6 +22,20 @@
                     <li>{{ skill }}</li>
                 {% endfor %}
             </ul>
+
+            <h4>Roadmap</h4>
+            <ul>
+                {% for step in r.result.get("roadmap", []) %}
+                    <li>{{ step }}</li>
+                {% endfor %}
+            </ul>
+
+            <h4>Interview Questions</h4>
+            <ul>
+                {% for question in r.result.get("interview_questions", []) %}
+                    <li>{{ question }}</li>
+                {% endfor %}
+            </ul>
         </div>
     {% endfor %}
 {% else %}
