@@ -1,7 +1,7 @@
 from flask import Flask,render_template, redirect, request, session
 from db import Base, engine, SessionLocal
 from models import User, Reports
-from ai_new import analyze_resume
+from gemini_ai import analyze_resume
 import models
 import PyPDF2
 import docx
