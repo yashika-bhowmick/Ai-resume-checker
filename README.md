@@ -14,7 +14,7 @@ Tech Stack:-
 
 Python, Flask, HTML, CSS, Jinja
 SQLAlchemy, PyMySQL
-PyPDF2, python-docx
+PyPDF2, python-docx,
 Google Gemini API
 
 Author
